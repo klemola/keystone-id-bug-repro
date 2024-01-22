@@ -1,0 +1,22 @@
+{
+  "name": "keystone-search-bug-repro",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@keystone-6/core": "5.7.0",
+    "@keystone-6/auth": "7.0.2"
+  },
+  "scripts": {
+    "dev": "keystone dev",
+    "start": "prisma migrate deploy && keystone start",
+    "build": "keystone build"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
